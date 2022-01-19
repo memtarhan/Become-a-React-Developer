@@ -1,44 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from "./App"
 
 ReactDOM.render(
-  <ul>
-    <li>Monday</li>
-    <li>Tuesday</li>
-    <li>Wednesday</li>
-  </ul>,
-  // React.createElement(
-  //   "ul",
-  //   null,
-  //   React.createElement(
-  //     "li",
-  //     {
-  //     style: { color: "blue", fontSize: 16, }
-  //     },
-  //     "An item"
-  //   ),
-  //   React.createElement(
-  //     "li",
-  //     {
-  //     style: { color: "blue", fontSize: 16, }
-  //     },
-  //     "An item"
-  //   ),
-  //   React.createElement(
-  //     "li",
-  //     {
-  //     style: { color: "blue", fontSize: 16, }
-  //     },
-  //     "An item"
-  //   ),
-  //   React.createElement(
-  //     "li",
-  //     {
-  //     style: { color: "blue", fontSize: 16, }
-  //     },
-  //     "An item"
-  //   )
-  // ),
+  <App />,
   document.getElementById('root')
 );
