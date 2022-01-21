@@ -14,7 +14,8 @@ function Main(props) {
       <p>We serve the most {props.adjective} food around.</p>
       <ul style={{textAlign: "left"}}>
         {
-          props.dishes.map((dish) => <li>{dish}</li>)
+          props.dishes.map((dish) => (
+          <li key={dish.id}>{dish.title}</li>))
         }
       </ul>
     </section>
@@ -29,11 +30,19 @@ function Footer(props) {
   )
 }
 
-const dishes = [
+const dishTitles = [
   "Steak",
   "Fish",
   "Pizza"
 ]
+
+const dishes = dishTitles.map((dish, index) => (
+  { 
+    id: index, 
+    title: dish 
+  }
+))
+console.log(dishes)
 
 /// - Printing out 
 // dishes.map((dish) => console.log(dish));
