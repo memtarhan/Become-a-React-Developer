@@ -1,21 +1,20 @@
 import './App.css';
-import React, { useReducer } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
-  const [checked, toggle] = useReducer((checked) => !checked, false);
-  const [value, increment] = useReducer((value) => value + 1, 0);
-  // const [value, decrement] = useReducer((value) => value - 1, 0);
+  const [data, setData] = useState(null);
 
-  return (
-    <>
-      <input type="checkbox" value={checked} onChange={toggle}></input>
-      <p>{checked ? "checked" : "not checked"}</p>
-      <br></br>
-      <button onClick={increment}>Increment</button>
-      {/* <button onClick={decrement}>Decrement</button> */}
-      <p>Current value: {value}</p>
-    </>
-  );
+  useEffect(() => {
+    fetch(`https://www.econdb.com/api/series/?format=json`)
+      .then((response) => response.json())
+      .then(setData);
+  }, []);
+
+  console.log(data);
+  if (data) {
+    return <div>{JSON.stringify(data)}</div>;
+  }
+  return <div>No user available</div>;
 }
 
 export default App;
