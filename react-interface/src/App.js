@@ -1,13 +1,15 @@
-import { BiArchive } from "react-icons/bi";
+import { BiCalendar } from "react-icons/bi";
 import Search from "./components/Search";
+import AddAppointment from "./components/AddAppointment";
 
 function App() {
   return (
     <div className="App container mx-auto mt-3 font-thin">
-      <h1 className="text-3xl">
-        <BiArchive className="inline-block text-red-400 align-center" />
+      <h1 className="text-3xl mb-3">
+        <BiCalendar className="inline-block text-red-400 align-center" />
         Your Appointments
       </h1>
+      <AddAppointment />
       <Search />
     </div>
   );
