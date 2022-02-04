@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import Card from "./Card.js";
-import "./Card.css";
 
 function App() {
   return (
     <div className="App">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
       <Card />
       <header className="App-header"></header>
     </div>

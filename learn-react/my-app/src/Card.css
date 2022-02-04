@@ -5,11 +5,11 @@ body {
 
 .card-container {
     background-color: #ffff;
-    border-radius: 16px;
+    border-radius: 6px;
     overflow: hidden;
     max-width: 300px;
     margin: 100px auto;
-    box-shadow: 0 10px 40px -14px rgba(206, 210, 216, 0.6) 0 10px 40px -10px rgba(173, 176, 182, 0.6);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .card-header {
