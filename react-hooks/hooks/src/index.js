@@ -1,20 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from "./App";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
-const people = ["Alex", "Ali", "Anna"];
+function App() {
+  const [status, setStatus] = useState("Not delivered");
 
-// - Array destructuring
-const [first, second] = ["Alex", "Ali", "Anna"];
-console.log(first, second); // prints out: Alex Ali
-
-const [, , onlyThird] = ["Alex", "Ali", "Anna"];
-console.log(onlyThird); // prints out: Anna
+  return (
+    <div>
+      <h1>The package is: {status}</h1>
+      <button onClick={() => setStatus("Delivered")}>Deliver</button>
+    </div>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App name="Mehmet" />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
